@@ -22,7 +22,13 @@ function App() {
 
       {/* Iterate over imported array in userData */}
       <div className="users">
-        display data here
+        {users.map((user, index) => (
+          <div key={index}>
+            <h3> {user.name}</h3>
+            <p>{user.location} </p>
+            <p> {user.car}</p>
+          </div>
+        ))}
         {/* Display each data in array in a card */}
         {/* Each card must have a 'key' attribute */}
       </div>
